@@ -1,11 +1,101 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Homepage from "../layouts/Homepage.astro";
+import me4 from "../assets/me4.jpg";
+import CV from "../assets/CV-Sep24.pdf";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<Homepage>
+	<div class="container is-full-screen">
+		<header>
+			<div class="top is-center is-vertical-align">
+				<img
+					class="is-rounded"
+					width="75px"
+					height="75px"
+					src={me4.src}
+					alt="logo"
+				/>
+				<h3 class="text-center">Edward Mason</h3>
+				<p class="text-center">
+					<i
+						>BSc Geography Undergraduate Student <br /> University of Birmingham</i
+					>
+				</p>
+			</div>
+		</header>
+
+		<!-- Social Media Links -->
+		<!--<nav class="nav">
+            <a class="bd-primary is-rounded is-center" href="#" id="theme-switch"
+                onclick="switchMode(this); return false;" aria-label="Switch Theme" role="button">☀️</a>
+            <div class="nav-center">
+                <a class="brand" href="https://github.com/edapm" target="_blank" aria-label="GitHub">
+                    <span class="iconify-inline" data-icon="ri:github-fill" style="color: #0054ff"></span>
+                </a>
+            </div>
+        </nav>-->
+
+		<!-- Link Buttons -->
+		<main>
+			<h5 class="text-center">Career</h5>
+			<!--<div class="row">
+                <div class="col is-center">
+                    <a class="button outline secondary" href="https://blog.edmason.co.uk/" target="_blank"><span
+                            class="iconify-inline" data-icon="ri:ball-pen-fill"></span>Blog</a>
+                </div>
+            </div>-->
+			<div class="row">
+				<div class="col is-center">
+					<a class="button outline secondary" href={CV} target="_blank"
+						><span class="iconify-inline" data-icon="ri:file-text-fill"
+						></span>CV</a
+					>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col is-center">
+					<a
+						class="button outline secondary"
+						href="https://linkedin.com/in/eapmason"
+						target="_blank"
+						><span class="iconify-inline" data-icon="ri:linkedin-fill"
+						></span>LinkedIn</a
+					>
+				</div>
+			</div>
+
+			<h5 class="text-center">Hobbies</h5>
+			<div class="row">
+				<div class="col is-center">
+					<a
+						class="button outline secondary"
+						href="https://github.com/edapm"
+						target="_blank"
+						><span class="iconify-inline" data-icon="ri:github-fill"
+						></span>GitHub</a
+					>
+				</div>
+			</div>
+			<!--<div class="row">
+                <div class="col is-center">
+                    <a class="button outline secondary" href="https://strava.com/athletes/74300441" target="_blank"><span
+                            class="iconify-inline" data-icon="bi:strava"></span>Strava</a>
+                </div>
+            </div>-->
+
+			<h5 class="text-center">Contact</h5>
+			<div class="row">
+				<div class="col is-center">
+					<a class="button outline secondary" href="mailto:ed@edmason.co.uk"
+						><span class="iconify-inline" data-icon="ri:mail-fill"
+						></span>Email</a
+					>
+				</div>
+			</div>
+		</main>
+
+		<footer class="text-center">
+			<h6>&copy; 2025 Edward Mason</h6>
+		</footer>
+	</div>
+</Homepage>
