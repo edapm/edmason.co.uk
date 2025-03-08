@@ -10,17 +10,18 @@ const thoughts = defineCollection({
 	schema: z.object({
 		title: z.string(),
 		date: z.string(),
-		summary: z.string()
+		summary: z.string().optional()
 	}),
 });
-const arch = defineCollection({
-	loader: glob({ pattern: "**/*.md", base: "./src/content/arch" }),
+const oldblogs = defineCollection({
+	loader: glob({ pattern: "**/*.md", base: "./src/content/arch/oldblogs" }),
 	schema: z.object({
 		title: z.string(),
 		date: z.string(),
-		summary: z.string()
+		iteration: z.string(),
+		summary: z.string().optional()
 	}),
 });
 
 // 4. Export a single `collections` object to register your collection(s)
-export const collections = { thoughts };
+export const collections = { thoughts, oldblogs };

@@ -10,6 +10,9 @@ const Nav = ({ title }) => {
 					<li className="text-black hover:bg-gray-400 p-4">
 						<a href="/thoughts">Thoughts</a>
 					</li>
+					<li className="text-black hover:bg-gray-400 p-4">
+						<a href="/arch">Archives</a>
+					</li>
 				</div>
 			</ul>
 		</nav>
