@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import Nav from "../components/Nav.jsx";
+const { pageTitle } = Astro.props;
 ---
 
 <!doctype html>
@@ -10,10 +11,10 @@ import Nav from "../components/Nav.jsx";
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Edward Mason</title>
+		<title>Edward Mason - {pageTitle}</title>
 	</head>
 	<body>
-		<Nav title="Ed Mason" />
+		<Nav title={pageTitle} />
 		<slot />
 	</body>
 </html>
