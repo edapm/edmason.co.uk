@@ -31,6 +31,13 @@ const { posts } = Astro.props;
 		.replace(/\b\w/g, (char: string) => char.toUpperCase())}
 >
 	<div class="container mx-auto p-4">
+		<h3 class="text-3xl font-semibold">
+			Posts Tagged: {
+				tag
+					.replace(/-/g, " ")
+					.replace(/\b\w/g, (char: string) => char.toUpperCase())
+			}
+		</h3>
 		<ul class="list-none">
 			{
 				posts.map((post) => (
