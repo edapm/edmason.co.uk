@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /admin/
+Disallow: /arch/
+
+Sitemap: https://edmason.co.uk/sitemap-index.xml
