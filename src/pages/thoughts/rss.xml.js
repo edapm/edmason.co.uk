@@ -17,12 +17,12 @@ export async function GET(context) {
 			pubDate: post.data.date,
 			// Note: this will not process components or JSX expressions in MDX files.
 			content: sanitizeHtml(parser.render(post.body), {
-				allowedTags: sanitizeHtml.defaults.allowedTags.concat(["img", "iframe"]),
+				allowedTags: sanitizeHtml.defaults.allowedTags.concat(["img"]),
 				allowedAttributes: {
 					a: ["href", "name", "target"],
 					img: ["src"],
-					iframe: ["src", "width", "height", "frameborder", "allowfullscreen"],
 				},
+				disallowedTags: ["iframe"],
 			}),
 			...post.data,
 		})),
