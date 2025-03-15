@@ -11,8 +11,15 @@ import calculateReadTime from "../utils/calculateReadTime.js";
 		<a href="/thoughts" class="text-blue-600 hover:underline">← Back</a>
 		<h1 class="text-4xl font-bold mb-4">{post.data.title}</h1>
 		<div class="text-gray-600 mb-4">
-			<h3>Published: {niceDate(post.data.date)}</h3>
-			<p>Read Time: {calculateReadTime(post.body)}</p>
+			<h3><b>Published:</b> {niceDate(post.data.date)}</h3>
+			{
+				post.data.tags ? (
+					<p>
+						<b>Tags:</b> {post.data.tags.join(", ")}
+					</p>
+				) : null
+			}
+			<p><b>Read Time:</b> {calculateReadTime(post.body)}</p>
 		</div>
 		<Prose>
 			<slot />

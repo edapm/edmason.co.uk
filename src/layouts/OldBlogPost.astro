@@ -16,9 +16,12 @@ import calculateReadTime from "../utils/calculateReadTime.js";
 		<a href="/arch/oldblogs" class="text-blue-600 hover:underline">← Back</a>
 		<h1 class="text-4xl font-bold mb-4">{post.data.title}</h1>
 		<div class="text-gray-600 mb-4">
-			<h3 class="text-purple-600">Blog Iteration: {post.data.iteration}</h3>
-			<h3>Published: {niceDate(post.data.date)}</h3>
-			<p>Read Time: {calculateReadTime(post.body)}</p>
+			<h3 class="text-purple-600">
+				<b>Blog Iteration:</b>
+				{post.data.iteration}
+			</h3>
+			<h3><b>Published:</b> {niceDate(post.data.date)}</h3>
+			<p><b>Read Time:</b> {calculateReadTime(post.body)}</p>
 		</div>
 		<Prose>
 			<slot />

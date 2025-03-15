@@ -18,7 +18,14 @@ import niceDate from "../../utils/niceDate.js";
 							>
 								{post.data.title}
 							</a>
-							<p class="italic">{niceDate(post.data.date)}</p>
+							<div>
+								{post.data.tags ? (
+									<p class="text-green-800 text-right">
+										{post.data.tags.join(", ")}
+									</p>
+								) : null}
+								<p class="italic text-right">{niceDate(post.data.date)}</p>
+							</div>
 						</div>
 					</li>
 				))
