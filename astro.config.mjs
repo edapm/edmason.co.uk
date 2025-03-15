@@ -11,5 +11,5 @@ export default defineConfig({
 	vite: {
 		plugins: [tailwindcss()],
 	},
-	integrations: [react(), sitemap()],
+	integrations: [react(), sitemap({ filter: (page) => !page.startsWith('https://edmason.co.uk/arch') })],
 });
