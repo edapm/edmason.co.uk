@@ -11,9 +11,9 @@ const Nav = ({ title }) => {
 						<a href="/thoughts">Thoughts</a>
 					</li>
 
-					<li className="text-black hover:bg-gray-400 p-4">
+					{/*<li className="text-black hover:bg-gray-400 p-4">
 						<a href="/arch">Archives</a>
-					</li>
+					</li>*/}
 					<li className="text-black hover:bg-orange-500 p-4">
 						<a href="/thoughts/rss.xml">
 							<span class="iconify-inline" data-icon="ri:rss-fill"></span>
