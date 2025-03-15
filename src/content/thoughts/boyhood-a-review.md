@@ -6,7 +6,8 @@ summary: "Thoughts on the 2014 film Boyhood"
 ---
 *Also on [Letterboxd](https://letterboxd.com/edapm/film/boyhood)*
 
-<iframe title="Deep Blue by Arcade Fire (Spotify)" style="border-radius:12px" src="https://open.spotify.com/embed/track/4OtIszkveMtijHSIp3EP4d?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" />
+<iframe title="Deep Blue by Arcade Fire (Spotify)" style="border-radius:12px" src="https://open.spotify.com/embed/track/4OtIszkveMtijHSIp3EP4d?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
 
 **Rating:** 4.5/5
 
