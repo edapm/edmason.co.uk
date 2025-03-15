@@ -1,7 +1,7 @@
 ---
 title: "Boyhood: A Review"
 date: "2025-03-14"
-tags: ["Film Review"]
+tags: ["film-review"]
 summary: "Thoughts on the 2014 film Boyhood"
 ---
 *Also on [Letterboxd](https://letterboxd.com/edapm/film/boyhood)*

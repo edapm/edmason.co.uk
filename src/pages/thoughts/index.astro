@@ -21,7 +21,11 @@ import niceDate from "../../utils/niceDate.js";
 							<div>
 								{post.data.tags ? (
 									<p class="text-green-800 text-right">
-										{post.data.tags.join(", ")}
+										{post.data.tags.map(tag => (
+											<a href={`/thoughts/tags/${tag}`} class="hover:underline">
+												{tag.replace(/-/g, ' ').replace(/\b\w/g, char => char.toUpperCase())}
+											</a>
+										)).reduce((prev, curr) => [prev, '|', curr])}
 									</p>
 								) : null}
 								<p class="italic text-right">{niceDate(post.data.date)}</p>
