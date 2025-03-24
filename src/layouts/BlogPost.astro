@@ -18,7 +18,7 @@ import calculateReadTime from "../utils/calculateReadTime.js";
 						<b>Tags:</b>{" "}
 						{post.data.tags
 							.map((tag: string) => (
-								<a href={`/thoughts/tags/${tag}`} class="hover:underline">
+								<a href={`/tags/${tag}`} class="hover:underline">
 									{tag
 										.replace(/-/g, " ")
 										.replace(/\b\w/g, (char: string) => char.toUpperCase())}

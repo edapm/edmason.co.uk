@@ -1,5 +1,5 @@
 ---
-import WithNav from "../../../layouts/WithNav.astro";
+import WithNav from "../../layouts/WithNav.astro";
 import { getCollection } from "astro:content";
 const posts = await getCollection("thoughts");
 const tags = posts
@@ -19,7 +19,7 @@ const tags = posts
 							<a
 								class="text-2xl text-green-800 font-semibold hover:underline"
 								href={
-									tag ? `/thoughts/tags/${tag.replace(/ +/g, "-").toLowerCase()}` : "#"
+									tag ? `/tags/${tag.replace(/ +/g, "-").toLowerCase()}` : "#"
 								}
 							>
 								{(tag ?? '').replace(/-/g, ' ').replace(/\b\w/g, char => char.toUpperCase())}

@@ -22,7 +22,7 @@ import niceDate from "../../utils/niceDate.js";
 								{post.data.tags ? (
 									<p class="text-green-800 text-right">
 										{post.data.tags.map(tag => (
-											<a href={`/thoughts/tags/${tag}`} class="hover:underline">
+											<a href={`/tags/${tag}`} class="hover:underline">
 												{tag.replace(/-/g, ' ').replace(/\b\w/g, char => char.toUpperCase())}
 											</a>
 										)).reduce((prev, curr) => [prev, '|', curr])}

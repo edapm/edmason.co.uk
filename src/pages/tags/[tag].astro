@@ -1,7 +1,7 @@
 ---
-import WithNav from "../../../layouts/WithNav.astro";
+import WithNav from "../../layouts/WithNav.astro";
 import { getCollection } from "astro:content";
-import niceDate from "../../../utils/niceDate.js";
+import niceDate from "../../utils/niceDate.js";
 
 export async function getStaticPaths() {
 	const allPosts = await getCollection("thoughts");
@@ -55,7 +55,7 @@ const { posts } = Astro.props;
 										{post.data.tags
 											.map((tag) => (
 												<a
-													href={`/thoughts/tags/${tag}`}
+													href={`/tags/${tag}`}
 													class="hover:underline"
 												>
 													{tag
