@@ -1,17 +1,10 @@
 ---
 import Default from "./Default.astro";
 ---
-
+<head>
+	<link rel="stylesheet" href="/style.css" />
+</head>
 <Default pageTitle="Home">
-	<head>
-		<link rel="stylesheet" href="/style.css" />
-		<link
-			rel="alternate"
-			type="application/rss+xml"
-			title="Edward Mason"
-			href={new URL("thoughts/rss.xml", Astro.site)}
-		/>
-	</head>
 	<style>
 		html,
 		body {
