@@ -1,9 +1,9 @@
-<!doctype html>
-<html lang="en">
+---
+import Default from "./Default.astro";
+---
+
+<Default pageTitle="Home">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
 		<link rel="stylesheet" href="/style.css" />
 		<link
 			rel="alternate"
@@ -11,25 +11,14 @@
 			title="Edward Mason"
 			href={new URL("thoughts/rss.xml", Astro.site)}
 		/>
-		<link rel="sitemap" href="/sitemap-index.xml" />
-		<script src="https://code.iconify.design/2/2.0.0/iconify.min.js"></script>
-		<script
-			defer
-			src="https://cloud.umami.is/script.js"
-			data-website-id="f6dd759d-f742-4258-9dba-d28f1023c9dd"></script>
-		<meta name="generator" content={Astro.generator} />
-		<title>Edward Mason</title>
 	</head>
-	<body>
-		<slot />
-	</body>
-</html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+	<style>
+		html,
+		body {
+			margin: 0;
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+	<slot />
+</Default>

@@ -1,5 +1,5 @@
 ---
-import Layout from "../../../layouts/Layout.astro";
+import WithNav from "../../../layouts/WithNav.astro";
 import { getCollection } from "astro:content";
 const posts = await getCollection("thoughts");
 const tags = posts
@@ -9,7 +9,7 @@ const tags = posts
 	.filter((tag, index, self) => self.indexOf(tag) === index);
 ---
 
-<Layout pageTitle="Tags">
+<WithNav pageTitle="Tags">
 	<div class="container mx-auto p-4">
 		<ul class="list-none">
 			{
@@ -30,4 +30,4 @@ const tags = posts
 			}
 		</ul>
 	</div>
-</Layout>
+</WithNav>

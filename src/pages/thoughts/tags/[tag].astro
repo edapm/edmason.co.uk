@@ -1,5 +1,5 @@
 ---
-import Layout from "../../../layouts/Layout.astro";
+import WithNav from "../../../layouts/WithNav.astro";
 import { getCollection } from "astro:content";
 import niceDate from "../../../utils/niceDate.js";
 
@@ -25,7 +25,7 @@ const { tag } = Astro.params;
 const { posts } = Astro.props;
 ---
 
-<Layout
+<WithNav
 	pageTitle={tag
 		.replace(/-/g, " ")
 		.replace(/\b\w/g, (char: string) => char.toUpperCase())}
@@ -74,4 +74,4 @@ const { posts } = Astro.props;
 			}
 		</ul>
 	</div>
-</Layout>
+</WithNav>

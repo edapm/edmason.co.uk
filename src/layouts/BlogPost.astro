@@ -1,12 +1,12 @@
 ---
-import Layout from "./Layout.astro";
+import WithNav from "./WithNav.astro";
 const { post } = Astro.props;
 import niceDate from "../utils/niceDate.js";
 import Prose from "../components/Prose.astro";
 import calculateReadTime from "../utils/calculateReadTime.js";
 ---
 
-<Layout props={post} pageTitle={post.data.title}>
+<WithNav props={post} pageTitle={post.data.title}>
 	<div class="max-w-4xl mx-auto p-4">
 		<a href="/thoughts" class="text-blue-600 hover:underline">← Back</a>
 		<h1 class="text-4xl font-bold mb-4">{post.data.title}</h1>
@@ -34,4 +34,4 @@ import calculateReadTime from "../utils/calculateReadTime.js";
 			<slot />
 		</Prose>
 	</div>
-</Layout>
+</WithNav>

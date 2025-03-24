@@ -1,12 +1,12 @@
 ---
-import Layout from "../../../layouts/Layout.astro";
+import WithNav from "../../../layouts/WithNav.astro";
 import { getCollection } from "astro:content";
 const posts = await getCollection("oldblogs");
 posts.sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
 import niceDate from "../../../utils/niceDate.js";
 ---
 
-<Layout pageTitle="Old Blogs">
+<WithNav pageTitle="Old Blogs">
 	<div class="container mx-auto p-4 font-serif">
 		<a href="/arch" class="text-blue-600 hover:underline">← Back</a>
 		<ul class="list-none">
@@ -27,4 +27,4 @@ import niceDate from "../../../utils/niceDate.js";
 			}
 		</ul>
 	</div>
-</Layout>
+</WithNav>
