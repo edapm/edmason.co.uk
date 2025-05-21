@@ -2,6 +2,7 @@
 import WithNav from "../../layouts/WithNav.astro";
 import { getCollection } from "astro:content";
 const posts = await getCollection("thoughts");
+posts.sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
 import niceDate from "../../utils/niceDate.js";
 ---
 
@@ -21,11 +22,15 @@ import niceDate from "../../utils/niceDate.js";
 							<div>
 								{post.data.tags ? (
 									<p class="text-green-800 text-right">
-										{post.data.tags.map(tag => (
-											<a href={`/tags/${tag}`} class="hover:underline">
-												{tag.replace(/-/g, ' ').replace(/\b\w/g, char => char.toUpperCase())}
-											</a>
-										)).reduce((prev, curr) => [prev, '|', curr])}
+										{post.data.tags
+											.map((tag) => (
+												<a href={`/tags/${tag}`} class="hover:underline">
+													{tag
+														.replace(/-/g, " ")
+														.replace(/\b\w/g, (char) => char.toUpperCase())}
+												</a>
+											))
+											.reduce((prev, curr) => [prev, "|", curr])}
 									</p>
 								) : null}
 								<p class="italic text-right">{niceDate(post.data.date)}</p>
