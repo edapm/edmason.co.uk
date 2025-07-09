@@ -5,5 +5,5 @@ import { getCollection } from "astro:content";
 const lists = await getCollection("readinglists");
 ---
 
-<Collection collection={{ name: "readinglists", displayName: "Reading Lists", namePlural: "Reading Lists",  items: lists }}>
+<Collection collection={{ name: "readinglists", displayName: "Reading Lists", namePlural: "Reading Lists",  items: lists, custom: ["iteration"]}}>
 </Collection>

@@ -72,6 +72,11 @@ import niceDate from "../utils/niceDate.js";
 												{niceDate(item.data.date)}
 											</span>
 										) : null}
+										{collection.custom.includes("iteration") ? (
+											<p class="text-purple-600 text-right">
+												List Version: {item.data.iteration}
+											</p>
+										) : null}
 									</div>
 								</div>
 							</li>

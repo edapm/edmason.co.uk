@@ -1,7 +1,10 @@
 ---
 import WithNav from "./WithNav.astro";
+import Card from "../components/Card.astro";
 const { list } = Astro.props;
-import Prose from "../components/Prose.astro";
+list.data.books.sort((a, b) => {
+	return a.year - b.year || a.title.localeCompare(b.title);
+});
 ---
 
 <WithNav props={list} pageTitle={list.data.title}>
@@ -10,12 +13,58 @@ import Prose from "../components/Prose.astro";
 		<h1 class="text-4xl font-bold mb-4">{list.data.title}</h1>
 		<div class="text-gray-600 mb-4">
 			<h3 class="text-purple-600 font-semibold">
-				Reading List Iteration:
+				List Version
 				{list.data.iteration}
 			</h3>
-			<Prose>
-				<slot />
-			</Prose>
+			<h3>
+				<span class="font-semibold">About</span>
+				{list.data.description || "No description provided."}
+			</h3>
+			<div>
+				<h2 class="text-2xl text-gray-700 font-semibold mt-6 mb-4">Books</h2>
+				{
+					list.data.books.length > 0 ? (
+						<>
+							<p>
+								This list contains {list.data.books.length} book{list.data.books.length > 1 ? "s" : ""}.
+							</p>
+							<ul>
+								{list.data.books.map(
+									(book: {
+										title: unknown;
+										author: unknown;
+										year: unknown;
+										publisher: any;
+										storygraph: any;
+									}) => (
+										<Card addStyles="grid auto-cols-auto m-6 hover:bg-gray-100 transition-colors duration-200">
+											<span>
+												<strong>{book.title}</strong> ({book.year})
+											</span>
+											<span class="italic text-gray-400">
+												{book.author}
+											</span>
+											{book.storygraph && (
+												<span class="text-right text-sm">
+													<a
+														href={book.storygraph}
+														class="text-blue-600 hover:underline"
+														target="_blank"
+													>
+														View on StoryGraph
+													</a>
+												</span>
+												)}
+										</Card>
+									)
+								)}
+							</ul>
+						</>
+					) : (
+						<p class="italic">No books have been added to this list yet.</p>
+					)
+				}
+			</div>
 		</div>
 	</div>
 </WithNav>

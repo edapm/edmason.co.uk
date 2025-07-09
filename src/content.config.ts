@@ -29,7 +29,14 @@ const readinglists = defineCollection({
 	}),
 	schema: z.object({
 		title: z.string(),
-		iteration: z.number(),
+		iteration: z.string(),
+		description: z.string().optional(),
+		books: z.array(z.object({
+			title: z.string(),
+			author: z.string(),
+			year: z.string(),
+			storygraph: z.string().optional(),
+		})),
 	})
 });
 
