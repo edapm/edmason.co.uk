@@ -1,0 +1,21 @@
+---
+import WithNav from "./WithNav.astro";
+const { list } = Astro.props;
+import Prose from "../components/Prose.astro";
+---
+
+<WithNav props={list} pageTitle={list.data.title}>
+	<div class="max-w-4xl mx-auto p-4">
+		<a href="/readinglists" class="text-blue-600 hover:underline">← Back</a>
+		<h1 class="text-4xl font-bold mb-4">{list.data.title}</h1>
+		<div class="text-gray-600 mb-4">
+			<h3 class="text-purple-600 font-semibold">
+				Reading List Iteration:
+				{list.data.iteration}
+			</h3>
+			<Prose>
+				<slot />
+			</Prose>
+		</div>
+	</div>
+</WithNav>

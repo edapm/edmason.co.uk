@@ -1,30 +1,18 @@
 ---
-import WithNav from "../../../layouts/WithNav.astro";
+import Collection from "../../../layouts/Collection.astro";
 import { getCollection } from "astro:content";
 const posts = await getCollection("oldblogs");
 posts.sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
-import niceDate from "../../../utils/niceDate.js";
 ---
 
-<WithNav pageTitle="Old Blogs">
-	<div class="container mx-auto p-4 font-serif">
-		<a href="/arch" class="text-blue-600 hover:underline">← Back</a>
-		<ul class="list-none">
-			{
-				posts.map((post) => (
-					<li class="p-2 my-4 mx-auto">
-						<div class="flex justify-between items-center">
-							<a
-								class="text-2xl font-semibold hover:underline"
-								href={`/arch/oldblogs/${post.id}`}
-							>
-								{post.data.title}
-							</a>
-							<p class="italic">{niceDate(post.data.date)}</p>
-						</div>
-					</li>
-				))
-			}
-		</ul>
-	</div>
-</WithNav>
+<Collection
+	collection={{
+		displayName: "Old Blogs",
+		name: "oldblogs",
+		namePlural: "Old Blog Posts",
+		items: posts,
+		custom: ["date", {"links": {"back": "arch"}}],
+		classes: "font-serif",
+	}}
+>
+</Collection>

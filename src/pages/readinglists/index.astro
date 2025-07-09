@@ -1,0 +1,9 @@
+---
+import { date } from "astro:schema";
+import Collection from "../../layouts/Collection.astro";
+import { getCollection } from "astro:content";
+const lists = await getCollection("readinglists");
+---
+
+<Collection collection={{ name: "readinglists", displayName: "Reading Lists", namePlural: "Reading Lists",  items: lists }}>
+</Collection>

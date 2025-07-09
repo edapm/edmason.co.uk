@@ -1,0 +1,20 @@
+---
+import ReadingList from "../../layouts/ReadingList.astro";
+import { getCollection, render } from "astro:content";
+
+// 1. Generate a new path for every collection entry
+export async function getStaticPaths() {
+	const lists = await getCollection("readinglists");
+	return lists.map((list) => ({
+		params: { id: list.id },
+		props: { list },
+	}));
+}
+// 2. For your template, you can get the entry directly from the prop
+const { list } = Astro.props;
+const { Content } = await render(list);
+---
+
+<ReadingList list={list}>
+	<Content />
+</ReadingList>
