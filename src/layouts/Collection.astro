@@ -30,12 +30,27 @@ import niceDate from "../utils/niceDate.js";
 						{collection.items.map((item: { id: any; data: any }) => (
 							<li class="p-2 my-4 mx-auto">
 								<div class="flex justify-between items-center">
-									<a
-										class="text-2xl font-semibold hover:underline"
-										href={`/${collection.name}/${item.id}`}
-									>
-										{item.data.title}
-									</a>
+									{(collection.custom.some(
+										(c: { links: { back: any; }; }) =>
+											typeof c === "object" && c.links && c.links.back
+									) ? (
+										<a
+											href={`/${collection.custom.find(
+												(c: { links: { back: any; }; }) =>
+													typeof c === "object" && c.links && c.links.back
+											).links.back}/${collection.name}/${item.id}`}
+											class="text-2xl font-semibold hover:underline"
+										>
+											{item.data.title}
+										</a>
+									) : (
+										<a
+											class="text-2xl font-semibold hover:underline"
+											href={`/${collection.name}/${item.id}`}
+										>
+											{item.data.title}
+										</a>
+									))}
 									<div>
 										{collection.custom.includes("tags") && item.data.tags ? (
 											<p class="text-green-800 text-right">
