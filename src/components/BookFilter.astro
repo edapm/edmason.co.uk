@@ -1,0 +1,7 @@
+---
+import BookFilterUI from "./BookFilterUI.jsx";
+
+const { books } = Astro.props;
+---
+
+<BookFilterUI client:load books={books} />

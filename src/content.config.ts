@@ -35,6 +35,8 @@ const readinglists = defineCollection({
 			title: z.string(),
 			author: z.string(),
 			year: z.string(),
+			topics: z.array(z.string()).optional(),
+			importance: z.enum(["low", "medium", "high"]),
 			storygraph: z.string().optional(),
 		})),
 	})

@@ -1,6 +1,8 @@
 ---
 import WithNav from "./WithNav.astro";
-import Card from "../components/Card.astro";
+
+import BookFilter from "../components/BookFilter.astro";
+
 const { list } = Astro.props;
 list.data.books.sort((a, b) => {
 	return a.year - b.year || a.title.localeCompare(b.title);
@@ -28,37 +30,7 @@ list.data.books.sort((a, b) => {
 							<p>
 								This list contains {list.data.books.length} book{list.data.books.length > 1 ? "s" : ""}.
 							</p>
-							<ul>
-								{list.data.books.map(
-									(book: {
-										title: unknown;
-										author: unknown;
-										year: unknown;
-										publisher: any;
-										storygraph: any;
-									}) => (
-										<Card addStyles="grid auto-cols-auto m-6 hover:bg-gray-100 transition-colors duration-200">
-											<span>
-												<strong>{book.title}</strong> ({book.year})
-											</span>
-											<span class="italic text-gray-400">
-												{book.author}
-											</span>
-											{book.storygraph && (
-												<span class="text-right text-sm">
-													<a
-														href={book.storygraph}
-														class="text-blue-600 hover:underline"
-														target="_blank"
-													>
-														View on StoryGraph
-													</a>
-												</span>
-												)}
-										</Card>
-									)
-								)}
-							</ul>
+							<BookFilter books={list.data.books} />
 						</>
 					) : (
 						<p class="italic">No books have been added to this list yet.</p>
