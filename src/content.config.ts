@@ -38,6 +38,7 @@ const readinglists = defineCollection({
 			topics: z.array(z.string()).optional(),
 			importance: z.enum(["low", "medium", "high"]),
 			storygraph: z.string().optional(),
+			notes: z.string().optional(),
 		})),
 	})
 });
