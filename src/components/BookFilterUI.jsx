@@ -4,8 +4,7 @@ const ITEMS_PER_PAGE = 5;
 
 export default function BookFilterUI({ books }) {
 	const [page, setPage] = useState(1);
-	const [dateSortOrder, setDateSortOrder] = useState("desc");
-	const [importanceSortOrder, setImportanceSortOrder] = useState("desc");
+	const [sortOrder, setSortOrder] = useState("yr-desc");
 	const [filters, setFilters] = useState({
 		text: "",
 		author: "",
@@ -41,24 +40,26 @@ export default function BookFilterUI({ books }) {
 		if (filters.importance) {
 			result = result.filter((book) => book.importance === filters.importance);
 		}
-		// Sort by year
-		result = result
-			.slice()
-			.sort((a, b) =>
-				dateSortOrder === "asc" ? a.year - b.year : b.year - a.year
-			);
+		// Sort by selected field
+		result = result.slice(); // avoid mutating original
 
-		// Sort by importance
-		result = result.sort((a, b) => {
+		if (sortOrder.startsWith("yr-")) {
+			result.sort((a, b) =>
+				sortOrder === "yr-asc" ? a.year - b.year : b.year - a.year
+			);
+		}
+		if (sortOrder.startsWith("imp-")) {
 			const importanceOrder =
-				importanceSortOrder === "asc"
+				sortOrder === "imp-asc"
 					? { high: 3, medium: 2, low: 1 }
 					: { high: 1, medium: 2, low: 3 };
-			return importanceOrder[a.importance] - importanceOrder[b.importance];
-		});
+			result.sort((a, b) =>
+				importanceOrder[a.importance] - importanceOrder[b.importance]
+			);
+		}
 
 		return result;
-	}, [filters, books, dateSortOrder, importanceSortOrder]);
+	}, [filters, books, sortOrder]);
 
 	const totalPages = Math.ceil(filteredBooks.length / ITEMS_PER_PAGE);
 	const paginatedBooks = filteredBooks.slice(
@@ -82,10 +83,9 @@ export default function BookFilterUI({ books }) {
 				}}
 				className="p-2 my-4 w-full"
 			/>
-			<div className="flex gap-4 mb-4">
-				<h1 className="align-middle">Filter By:</h1>
-				<select
-					className="p-2 flex-1/2"
+			<div className="flex gap-2 md:gap-4 mb-4">
+				{/*<select
+					className="p-2 w-2/5 md:flex-1/2"
 					value={filters.author}
 					onChange={(e) => {
 						setFilters((prev) => ({ ...prev, author: e.target.value }));
@@ -98,38 +98,31 @@ export default function BookFilterUI({ books }) {
 							{author}
 						</option>
 					))}
-				</select>
+				</select>*/}
 				<select
-					className="p-2 flex-1/2"
+					className="p-2 w-full"
 					value={filters.importance}
 					onChange={(e) => {
 						setFilters((prev) => ({ ...prev, importance: e.target.value }));
 						setPage(1);
 					}}
 				>
-					<option value="">All Importance Levels</option>
-					<option value="high">&#33;&#33;&#33; Must Read</option>
-					<option value="medium">&#33;&#33; Should Read</option>
-					<option value="low">&#33; Could Read</option>
+					<option value="">Filter: Importance</option>
+					<option value="high">Filter: !!! Must Read</option>
+					<option value="medium">Filter: !! Should Read</option>
+					<option value="low">Filter: ! Could Read</option>
 				</select>
 			</div>
-			<div className="flex gap-4 mb-4">
-				<h1 className="align-middle">Sort By:</h1>
+			<div className="flex gap-2 md:gap-4 mb-4">
 				<select
-					className="p-2 flex-1/4"
-					value={dateSortOrder}
-					onChange={(e) => setDateSortOrder(e.target.value)}
+					className="p-2 w-full"
+					value={sortOrder}
+					onChange={(e) => setSortOrder(e.target.value)}
 				>
-					<option value="desc">Year: Newest First</option>
-					<option value="asc">Year: Oldest First</option>
-				</select>
-				<select
-					className="p-2 flex-1/4"
-					value={importanceSortOrder}
-					onChange={(e) => setImportanceSortOrder(e.target.value)}
-				>
-					<option value="desc">Importance: High to Low</option>
-					<option value="asc">Importance: Low to High</option>
+					<option value="yr-desc">Sort: Year - Newest First</option>
+					<option value="yr-asc">Sort: Year - Oldest First</option>
+					<option value="imp-desc">Sort: Importance - High to Low</option>
+					<option value="imp-asc">Sort: Importance - Low to High</option>
 				</select>
 			</div>
 
