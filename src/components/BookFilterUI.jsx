@@ -2,9 +2,19 @@ import { useState, useMemo } from "react";
 
 const ITEMS_PER_PAGE = 5;
 
+function toUpper(str) {
+	return str
+		.toLowerCase()
+		.split(" ")
+		.map(function (word) {
+			return word[0].toUpperCase() + word.substr(1);
+		})
+		.join(" ");
+}
+
 export default function BookFilterUI({ books }) {
 	const [page, setPage] = useState(1);
-	const [sortOrder, setSortOrder] = useState("yr-desc");
+	const [sortOrder, setSortOrder] = useState("imp-desc");
 	const [filters, setFilters] = useState({
 		text: "",
 		author: "",
@@ -151,7 +161,7 @@ export default function BookFilterUI({ books }) {
 						)}
 						{book.topics && book.topics.length > 0 && (
 							<span className="text-sm text-gray-500">
-								Topics: {book.topics.join(", ")}
+								Topics: {book.topics.map(toUpper).join(", ")}
 							</span>
 						)}
 						{book.storygraph && (
