@@ -74,6 +74,14 @@ books: [
         topics: ["technology", "culture", "faith", "christian ethics"],
         importance: "medium",
         storygraph: "https://app.thestorygraph.com/books/84d31a49-1a75-455d-bb02-8455856fb6f6"
+    },
+    {
+        title: "The Age of Surveillance Capitalism",
+        author: "Shoshana Zuboff",
+        year: "2019",
+        topics: ["technology", "economics", "politics", "power", "philosophy"],
+        importance: "low",
+        storygraph: "https://app.thestorygraph.com/books/10c33a2c-1c31-4f7f-bdeb-ee15deb6f905"
     }
 ]
 ---
