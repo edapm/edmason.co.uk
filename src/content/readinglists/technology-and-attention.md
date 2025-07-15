@@ -32,7 +32,7 @@ books: [
         author: "Johann Hari",
         year: "2022",
         topics: ["technology", "attention", "culture", "psychology", "internet"],
-        importance: "medium",
+        importance: "high",
         storygraph: "https://app.thestorygraph.com/books/663a71d5-a869-4ca1-84c2-7bddd09e11d4"
     },
     {
