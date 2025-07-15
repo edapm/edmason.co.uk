@@ -1,6 +1,6 @@
 ---
 title: "Technology & Attention"
-iteration: "1.0"
+iteration: "1.1"
 description: "A list of books around the effects of digital technology"
 books: [
     {
