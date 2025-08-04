@@ -1,6 +1,6 @@
 ---
 title: "Technology & Attention"
-iteration: "1.1"
+iteration: "1.2"
 description: "A list of books around the effects of digital technology"
 books: [
     {
@@ -82,6 +82,14 @@ books: [
         topics: ["technology", "economics", "politics", "power", "philosophy"],
         importance: "low",
         storygraph: "https://app.thestorygraph.com/books/10c33a2c-1c31-4f7f-bdeb-ee15deb6f905"
+    },
+    {
+        title: "12 Ways Your Phone Is Changing You",
+        author: "Tony Reinke",
+        year: "2017",
+        topics: ["technology", "faith", "christian living"],
+        importance: "low",
+        storygraph: "https://app.thestorygraph.com/books/925dad48-2a3e-4593-b452-5bbd63401ab7"
     }
 ]
 ---
