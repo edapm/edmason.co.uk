@@ -96,7 +96,7 @@ books: [
         author: "Cal Newport",
         year: "2019",
         topics: ["technology", "smartphones", "habits", "digital detox"],
-        importance: "medium",
+        importance: "high",
         storygraph: "https://app.thestorygraph.com/books/dd8bf872-e651-4254-9c21-c11359caa7b2"
     },
     {
