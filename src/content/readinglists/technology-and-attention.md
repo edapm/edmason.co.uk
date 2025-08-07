@@ -1,6 +1,6 @@
 ---
 title: "Technology & Attention"
-iteration: "1.2"
+iteration: "1.3"
 description: "A list of books around the effects of digital technology"
 books: [
     {
@@ -90,6 +90,22 @@ books: [
         topics: ["technology", "faith", "christian living"],
         importance: "low",
         storygraph: "https://app.thestorygraph.com/books/925dad48-2a3e-4593-b452-5bbd63401ab7"
+    },
+    {
+        title: "Digital Minimalism",
+        author: "Cal Newport",
+        year: "2019",
+        topics: ["technology", "smartphones", "habits", "digital detox"],
+        importance: "medium",
+        storygraph: "https://app.thestorygraph.com/books/dd8bf872-e651-4254-9c21-c11359caa7b2"
+    },
+    {
+        title: "The Wisdom Pyramid",
+        author: "Brett McCracken",
+        year: "2021",
+        topics: ["technology", "smartphones", "habits", "christian living"],
+        importance: "medium",
+        storygraph: "https://app.thestorygraph.com/books/9c4a2cb6-b4f8-4025-bec0-3f6b12b5801e"
     }
 ]
 ---
