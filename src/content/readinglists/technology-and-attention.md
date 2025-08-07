@@ -60,14 +60,6 @@ books: [
         storygraph: "https://app.thestorygraph.com/books/e1aa910c-4223-495d-95b8-17f6d54f26ac"
     },
     {
-        title: "The Coddling of the American Mind",
-        author: "Greg Lukianoff, Jonathan Haidt",
-        year: "2018",
-        topics: ["education", "culture", "psychology"],
-        importance: "medium",
-        storygraph: "https://app.thestorygraph.com/books/e7f8e307-d773-4390-80fa-c356e41864cf"
-    },
-    {
         title: "Scrolling Ourselves to Death",
         author: "Ivan Mesa, Brett McCracken",
         year: "2025",
