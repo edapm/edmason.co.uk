@@ -42,6 +42,12 @@ const readinglists = defineCollection({
 		})),
 	})
 });
+const otherstuff = defineCollection({
+	loader: glob({ pattern: "**/*.md", base: "./src/content/otherstuff" }),
+	schema: z.object({
+		title: z.string(),
+	}),
+});
 
 // 4. Export a single `collections` object to register your collection(s)
-export const collections = { thoughts, oldblogs, readinglists };
+export const collections = { thoughts, oldblogs, readinglists, otherstuff };

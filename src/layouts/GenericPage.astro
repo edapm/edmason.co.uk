@@ -1,0 +1,42 @@
+---
+import WithNav from "./WithNav.astro";
+const { post } = Astro.props;
+import niceDate from "../utils/niceDate.js";
+import Prose from "../components/Prose.astro";
+import calculateReadTime from "../utils/calculateReadTime.js";
+---
+
+<WithNav props={post} pageTitle={post.data.title}>
+	<div class="max-w-4xl mx-auto p-4">
+		<h1 class="text-4xl font-bold mb-4">{post.data.title}</h1>
+		<div class="text-gray-600 mb-4">
+			{
+				post.data.date ? (
+					<h3>
+						<b>Published:</b> {niceDate(post.data.date)}
+					</h3>
+				) : null
+			}
+			{
+				post.data.tags ? (
+					<p>
+						<b>Tags:</b>{" "}
+						{post.data.tags
+							.map((tag: string) => (
+								<a href={`/tags/${tag}`} class="hover:underline">
+									{tag
+										.replace(/-/g, " ")
+										.replace(/\b\w/g, (char: string) => char.toUpperCase())}
+								</a>
+							))
+							.reduce((prev: any, curr: any) => [prev, "|", curr])}
+					</p>
+				) : null
+			}
+			<p><b>Read Time:</b> {calculateReadTime(post.body)}</p>
+		</div>
+		<Prose>
+			<slot />
+		</Prose>
+	</div>
+</WithNav>
