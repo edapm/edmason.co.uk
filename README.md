@@ -2,4 +2,4 @@
 My website, built with [Astro](https://astro.build).
 
 ## Copyright
-&copy; 2025 Edward Mason
+&copy; 2026 Edward Mason
