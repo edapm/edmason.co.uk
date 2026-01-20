@@ -1,10 +1,10 @@
 ---
 title: "Reflections on Modern Technology"
 date: "2025-09-17"
-tags: ["technology-and-attention", "book-review"]
+tags: ["whats-tech-for", "book-review"]
 summary: "Thoughts on my summer reading"
 ---
-*The majority of the books mentioned here are included in my **Technology & Attention** reading list, which can be found [here](https://edmason.co.uk/readinglists/technology-and-attention/ "Technology & Attention").*
+*The majority of the books mentioned here are included in my **What's Tech For** reading list, which can be found [here](https://edmason.co.uk/readinglists/whats-tech-for/ "What's Tech For").*
 
 One of the great bonuses of being a student is the long summers. This year, my summer has been not-so-much “busy” as being a patchwork of various, shorter commitments. This has left me, however, with lots of time to read.
 

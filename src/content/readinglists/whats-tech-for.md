@@ -1,6 +1,6 @@
 ---
-title: "Technology & Attention"
-iteration: "1.3"
+title: "What's Tech For?"
+iteration: "1.4"
 description: "A list of books around the effects of digital technology"
 books: [
     {
@@ -9,7 +9,7 @@ books: [
         year: "2024",
         topics: ["technology", "smartphones", "childhood", "psychology", "internet", "social media"],
         importance: "high",
-        storygraph: "https://app.thestorygraph.com/books/800ee063-3135-48df-bd48-a3bb6183a475"
+        isbn: "9780241647660"
     },
     {
         title: "Amusing Ourselves to Death",
@@ -17,7 +17,7 @@ books: [
         year: "1985",
         topics: ["technology", "media ecology"],
         importance: "high",
-        storygraph: "https://app.thestorygraph.com/books/10bbee57-d606-44e0-b3a1-6ffa3f4596fe"
+        isbn: "9780143036531"
     },
     {
         title: "The Shallows",
@@ -25,15 +25,15 @@ books: [
         year: "2010",
         topics: ["technology", "psychology", "internet"],
         importance: "medium",
-        storygraph: "https://app.thestorygraph.com/books/461512fe-5b00-49cc-95ac-e616bd3cb66b"
+        isbn: "9781848872271"
     },
     {
         title: "Stolen Focus",
         author: "Johann Hari",
         year: "2022",
         topics: ["technology", "attention", "culture", "psychology", "internet"],
-        importance: "high",
-        storygraph: "https://app.thestorygraph.com/books/663a71d5-a869-4ca1-84c2-7bddd09e11d4"
+        importance: "medium",
+        isbn: "9781526620163"
     },
     {
         title: "The Medium is the Massage",
@@ -41,7 +41,7 @@ books: [
         year: "1966",
         topics: ["technology", "mass media", "culture", "media ecology"],
         importance: "low",
-        storygraph: "https://app.thestorygraph.com/books/03a7f11d-69fb-40f8-b0b2-f3db3e52cfe4"
+        isbn: "9780141035826"
     },
     {
         title: "Brave New World",
@@ -49,7 +49,7 @@ books: [
         year: "1932",
         topics: ["fiction", "dystopian", "technology", "culture"],
         importance: "low",
-        storygraph: "https://app.thestorygraph.com/books/4f37a102-27f3-4817-8cb7-878aca49cd3a"
+        isbn: "9780099518471"
     },
     {
         title: "Technopoly",
@@ -57,7 +57,7 @@ books: [
         year: "1992",
         topics: ["technology", "media ecology", "culture", "future"],
         importance: "high",
-        storygraph: "https://app.thestorygraph.com/books/e1aa910c-4223-495d-95b8-17f6d54f26ac"
+        isbn: "9780679745402"
     },
     {
         title: "Scrolling Ourselves to Death",
@@ -65,7 +65,7 @@ books: [
         year: "2025",
         topics: ["technology", "culture", "faith", "christian ethics"],
         importance: "medium",
-        storygraph: "https://app.thestorygraph.com/books/84d31a49-1a75-455d-bb02-8455856fb6f6"
+        isbn: "9781433599446"
     },
     {
         title: "The Age of Surveillance Capitalism",
@@ -73,15 +73,15 @@ books: [
         year: "2019",
         topics: ["technology", "economics", "politics", "power", "philosophy"],
         importance: "low",
-        storygraph: "https://app.thestorygraph.com/books/10c33a2c-1c31-4f7f-bdeb-ee15deb6f905"
+        isbn: "9781610395694"
     },
     {
         title: "12 Ways Your Phone Is Changing You",
         author: "Tony Reinke",
         year: "2017",
         topics: ["technology", "faith", "christian living"],
-        importance: "low",
-        storygraph: "https://app.thestorygraph.com/books/925dad48-2a3e-4593-b452-5bbd63401ab7"
+        importance: "high",
+        isbn: "9781433552434"
     },
     {
         title: "Digital Minimalism",
@@ -89,7 +89,7 @@ books: [
         year: "2019",
         topics: ["technology", "smartphones", "habits", "digital detox"],
         importance: "high",
-        storygraph: "https://app.thestorygraph.com/books/dd8bf872-e651-4254-9c21-c11359caa7b2"
+        isbn: "9780241453575"
     },
     {
         title: "The Wisdom Pyramid",
@@ -97,7 +97,23 @@ books: [
         year: "2021",
         topics: ["technology", "smartphones", "habits", "christian living"],
         importance: "medium",
-        storygraph: "https://app.thestorygraph.com/books/9c4a2cb6-b4f8-4025-bec0-3f6b12b5801e"
+        isbn: "9781433569593"
+    },
+    {
+        title: "God, Technology, and the Christian Life",
+        author: "Tony Reinke",
+        year: "2022",
+        topics: ["technology", "history", "christian worldview"],
+        importance: "medium",
+        isbn: "9781433578274"
+    },
+    {
+        title: "The Technological Bluff",
+        author: "Jacques Ellul",
+        year: "1990",
+        topics: ["technology", "technique", "philosophy", "culture"],
+        importance: "low",
+        isbn: "9780802809605"
     }
 ]
 ---
