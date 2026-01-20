@@ -164,16 +164,9 @@ export default function BookFilterUI({ books }) {
 								Topics: {book.topics.map(toUpper).join(", ")}
 							</span>
 						)}
-						{book.storygraph && (
+						{book.isbn && (
 							<span className="text-right text-sm">
-								<a
-									href={book.storygraph}
-									className="text-blue-600 hover:underline"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									View on StoryGraph
-								</a>
+								<b>ISBN:</b> {book.isbn}
 							</span>
 						)}
 					</div>
