@@ -1,7 +1,7 @@
 ---
 title: "Reflections on Modern Technology"
 date: "2025-09-17"
-tags: ["whats-tech-for", "book-review"]
+tags: ["what's-tech-for", "book-review"]
 summary: "Thoughts on my summer reading"
 ---
 *The majority of the books mentioned here are included in my **What's Tech For** reading list, which can be found [here](https://edmason.co.uk/readinglists/whats-tech-for/ "What's Tech For").*

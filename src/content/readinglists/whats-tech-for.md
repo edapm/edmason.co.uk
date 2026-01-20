@@ -103,7 +103,7 @@ books: [
         title: "God, Technology, and the Christian Life",
         author: "Tony Reinke",
         year: "2022",
-        topics: ["technology", "history", "christian worldview"],
+        topics: ["technology", "history", "christian ethics"],
         importance: "medium",
         isbn: "9781433578274"
     },
