@@ -51,7 +51,7 @@ import niceDate from "../utils/niceDate.js";
 											{item.data.title}
 										</a>
 									))}
-									<div>
+									{/*<div>
 										{collection.custom.includes("tags") && item.data.tags ? (
 											<p class="text-green-800 text-right">
 												{item.data.tags
@@ -67,6 +67,8 @@ import niceDate from "../utils/niceDate.js";
 													.reduce((prev: any, curr: any) => [prev, "|", curr])}
 											</p>
 										) : null}
+									</div>*/}
+									<div>
 										{collection.custom.includes("date") ? (
 											<span class="italic text-right">
 												{niceDate(item.data.date)}
