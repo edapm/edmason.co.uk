@@ -1,6 +1,6 @@
 ---
 title: "What's Tech For?"
-iteration: "1.4"
+iteration: "1.5"
 description: "A list of books around the effects of digital technology"
 books: [
     {
@@ -56,7 +56,7 @@ books: [
         author: "Neil Postman",
         year: "1992",
         topics: ["technology", "media ecology", "culture", "future"],
-        importance: "high",
+        importance: "medium",
         isbn: "9780679745402"
     },
     {
@@ -96,7 +96,7 @@ books: [
         author: "Brett McCracken",
         year: "2021",
         topics: ["technology", "smartphones", "habits", "christian living"],
-        importance: "medium",
+        importance: "high",
         isbn: "9781433569593"
     },
     {
