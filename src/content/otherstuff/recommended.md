@@ -14,7 +14,7 @@ Below is a list of things I've read that I would recommend or regularly read fro
 - Redeeming Productivity ([redeemingproductivity.com](https://redeemingproductivity.com)) - Reagan Rose writes on productivity from a Christian perspective
 - After Babel ([afterbabel.com](https://www.afterbabel.com)) - Jonathan Haidt's website, discussing the current cultural and technological crisis
 - Digital Liturgies ([digitalliturgies.net](https://www.digitalliturgies.net)) - Samuel James writes on the digital age from a Christian perspective
-- Plough ([plough.com](https://plough.com)) - Essays and articles on issues relating to localism, from a broadly Christian or conservaitve perspective (published by the [Bruderhof](https://bruderhof.com))
+- Plough ([plough.com](https://plough.com)) - Essays and articles from a broadly Christian or conservative perspective (published by the [Bruderhof](https://bruderhof.com))
 
 ## Current Affairs & Analysis
 - Financial Times ([ft.com](https://ft.com))
