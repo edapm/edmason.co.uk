@@ -18,4 +18,4 @@ He also advocated an environmentalism which was different to what many are sayin
 
 He was a counter-cultural voice that our world still needs. I look forward to continuing to read his works, and trust that the values he championed, which many share, will continue to be defended and encouraged in our broken world; a broken world which desperately needs the hope of the Gospel, which Wendell Berry showed in many of his writings.
 
-RIP Wendell Berry, 1934 - 2026
+**RIP Wendell Berry, 1934 - 2026**
