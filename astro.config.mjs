@@ -18,6 +18,7 @@ export default defineConfig({
 		}),
 	],
 	redirects: {
-		"/tech": "/writing"
+		"/tech": "/writing",
+		"/cv": "/CV-Sep26.pdf"
 	},
 });
