@@ -11,5 +11,13 @@ export default defineConfig({
 	vite: {
 		plugins: [tailwindcss()],
 	},
-	integrations: [react(), sitemap({ filter: (page) => !page.startsWith('https://edmason.co.uk/arch') })],
+	integrations: [
+		react(),
+		sitemap({
+			filter: (page) => !page.startsWith("https://edmason.co.uk/arch"),
+		}),
+	],
+	redirects: {
+		"/tech": "/writing"
+	},
 });
