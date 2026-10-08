@@ -19,6 +19,6 @@ export default defineConfig({
 	],
 	redirects: {
 		"/tech": "/writing",
-		"/cv": "/CV-Sep26.pdf"
+		"/cv": "/CV-Oct26.pdf"
 	},
 });
