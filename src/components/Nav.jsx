@@ -14,6 +14,9 @@ const Nav = ({ title }) => {
 						<a href="/arch">Archives</a>
 					</li>*/}
 					<li className="text-black hover:bg-gray-400 p-4">
+						<a href="/writing">Writing</a>
+					</li>
+					<li className="text-black hover:bg-gray-400 p-4">
 						<a href="/readinglists">Reading Lists</a>
 					</li>
 					<li className="text-black hover:bg-orange-500 p-4">
